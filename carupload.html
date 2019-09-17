@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table 
+        {
+            width: 300px;
+            font: 17px Calibri;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        table img 
+        {
+            border: none;
+            width: 51px;
+            height: 51px;
+        }
+    </style>
     <title>Booty cars</title>
 </head>
 <body>
@@ -28,6 +48,7 @@
         </nav>
     </header>
 
+<div>
     <form>
         <label>Car Name: </label><input type="text" class="carname" id="carname" placeholder="Car Name" />
         <label>Car Make: </label><input type="text" class="carmake" id="carmake" placeholder="Car Make" />
@@ -37,6 +58,23 @@
         <button class="uploadBtn">Submit</button>
         <p class="errorMsg"></p>
     </form>
+</div>
+<p>Search Database: <input type="button" id="btnShowImg" value="Click to Show" /></p>
+<div id='showData'></div>
+<div>
+
+</div>
+
+<p>
+        <input type="button" value="Fill SELECT Dropdown List with JSON" id="bt" />
+    </p>
+
+    <select id="sel">
+        <option value="">-- Select --</option>
+    </select>
+
+    <p id="msg"></p>
+
 
     <script src="./js/jquery.js"></script>
     <script src="./js/carupload.js"></script>
