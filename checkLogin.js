@@ -8,7 +8,7 @@ $(document).ready(function() {
       window.location.assign('signin.html');
     } else {
       //Else prompt the user he is logged in
-      $('.logChk').html('You are logged in');
+      $('.checkLogin').html('You are logged in');
     }
   });
   
