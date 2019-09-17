@@ -13,7 +13,7 @@ $(document).ready(function() {
         }
         $.ajax({
             method: 'GET',
-            url: `http://localhost:3000/users?email=${email}`,
+            url: `http://localhost:3000/users?username=${username}&email=${email}`,
             data: {
                 username,
                 email,
