@@ -83,10 +83,10 @@ $(document).ready(function() {
         });
       });
       //Logout Function
-      /*$('.logoutBtn').click(function() {
+      $('.logoutBtn').click(function() {
         //clear the localstorage and redirect to signup page
         localStorage.clear();
         $('.logChk').html('Kindly login');
         window.location.assign('signup.html');
-      });*/
+      });
 });
