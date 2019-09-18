@@ -7,6 +7,14 @@
       "caryear": "2019",
       "caramt": "N11,500,000",
       "id": 1
+    },
+    {
+      "carname": "New",
+      "carmake": "Lexus",
+      "carmodel": "Rx350",
+      "caryear": "2010",
+      "caramt": "N5,000,000",
+      "id": 2
     }
   ]
 }

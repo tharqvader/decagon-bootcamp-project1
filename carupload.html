@@ -27,7 +27,7 @@
     <title>Booty cars</title>
 </head>
 <body>
-    <h1>Booty Cars</h1>
+    <h1>CarZZZ</h1>
     <header>
         <nav>
             <div class="moveRight">
@@ -50,15 +50,18 @@
 
 <div>
     <form>
-        <label>Car Name: </label><input type="text" class="carname" id="carname" placeholder="Car Name" />
-        <label>Car Make: </label><input type="text" class="carmake" id="carmake" placeholder="Car Make" />
-        <label>Car Model: </label><input type="text" class="carmodel" id="carmodel" placeholder="Car Model" />
-        <label>Model Year: </label><input type="text" class="caryear" id="caryear" placeholder="Model Year" />
-        <label>Amount: </label><input type="text" class="caramt" id="caramt" placeholder="Amount" />
+        <label for="carname">Car Name: </label><input type="text" class="carname" id="carname" placeholder="Car Name" />
+        <label for="carmake">Car Make: </label><input type="text" class="carmake" id="carmake" placeholder="Car Make" />
+        <label for="carmodel">Car Model: </label><input type="text" class="carmodel" id="carmodel" placeholder="Car Model" />
+        <label for="caryear">Model Year: </label><input type="text" class="caryear" id="caryear" placeholder="Model Year" />
+        <label for="caramt">Amount: </label><input type="text" class="caramt" id="caramt" placeholder="Amount" />
         <button class="uploadBtn">Submit</button>
         <p class="errorMsg"></p>
     </form>
 </div>
+
+<div id="details"></div>
+
 <p>Search Database: <input type="button" id="btnShowImg" value="Click to Show" /></p>
 <div id='showData'></div>
 <div>
