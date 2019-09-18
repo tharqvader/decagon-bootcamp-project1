@@ -7,7 +7,14 @@
       "email": "udokwu.chika@gmail.com",
       "password": "abdch",
       "id": 1
+    },
+    {
+      "firstname": "Chika",
+      "lastname": "Obagi",
+      "username": "Obago1",
+      "email": "Obagi2@mail.com",
+      "password": "wechat",
+      "id": 2
     }
   ]
-
 }

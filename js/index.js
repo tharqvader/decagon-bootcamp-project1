@@ -1,4 +1,13 @@
+    document.getElementById(".button").addEventListener("click", function() {
+        document.querySelector(".popup").style.display = "flex";
+    }) 
+   
+    document.querySelector(".closeBtn").addEventListener("click", function() {
+        document.querySelector(".popup").style.display = "none";
+    })
+
 $(document).ready(function() {
+    
     //Registration Part!
     $('.submitRegBtn').click(function(event) {
         event.preventDefault();
@@ -67,15 +76,15 @@ $(document).ready(function() {
             password: passwordLog,
           },
           beforeSend: function() {
-            $('.regMsg').html('Loading....');
+            $('.regMsg').html('Please wait!!....');
           },
           success: function(response) {
             if (response.length) {
-              $('.regMsg').html('Login sucessful');
+              //$('.regMsg').html('Login sucessful');
               $('.logChk').html('You are logged in');
               localStorage.setItem('email', emailLog);
               //redirect to home page if the login is successfull
-              window.location = 'index.html';
+              window.Location.assign('index.html');
             } else {
               $('.regMsg').html('Username or password Incorrect');
             }
