@@ -1,11 +1,3 @@
-    document.getElementById(".button").addEventListener("click", function() {
-        document.querySelector(".popup").style.display = "flex";
-    }) 
-   
-    document.querySelector(".closeBtn").addEventListener("click", function() {
-        document.querySelector(".popup").style.display = "none";
-    })
-
 $(document).ready(function() {
     
     //Registration Part!
@@ -51,6 +43,9 @@ $(document).ready(function() {
                 },
                 success: function() {
                 $('.regMsg').html('Registration Successfull');
+                localStorage.setItem('email', email);
+              //redirect to home page if the login is successfull
+                window.Location.assign('signin.html');
                 },
             });
             }

@@ -15,6 +15,38 @@
       "email": "Obagi2@mail.com",
       "password": "wechat",
       "id": 2
+    },
+    {
+      "firstname": "Abel ",
+      "lastname": "Jonah",
+      "username": "joebobs",
+      "email": "jobobo@mail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "firstname": "Gee",
+      "lastname": "Bag",
+      "username": "Gbee",
+      "email": "Gbag@yahoo.com",
+      "password": "abcdef",
+      "id": 4
+    },
+    {
+      "firstname": "Geezer",
+      "lastname": "Bagger",
+      "username": "Gbaa",
+      "email": "Gbeeg@yahoo.com",
+      "password": "qwerty",
+      "id": 5
+    },
+    {
+      "firstname": "abaa",
+      "lastname": "sunn",
+      "username": "abasun",
+      "email": "absun@gmail.com",
+      "password": "weget",
+      "id": 6
     }
   ]
 }
