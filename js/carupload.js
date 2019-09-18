@@ -40,71 +40,49 @@ $(document).ready(function() {
             },
         });
     });
+   
+    $.getJSON("db.json", function(data){
+        let details = "";
+        
+        $.each(data.cars, function(key, value){
+            details += "<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
 
-    // $('#btnshowImg').click(function () {
-    //     $.getJSON('db.json', function (data) {
-    //         let arrItems = [];  //the array that'll store json items.
-    //         $.each(data, function (index, value) {
-    //             arrItems.push(value); //push values into array
-    //         });
 
-    //         //Extract values for the table header.
-    //         let col = [];
-    //         for (let i = 0; i < arrItems.length; i++){
-    //             for (let key in arrItems[i]) {
-    //                 if (col.indexOf(key) === -1) {
-    //                     col.push(key);
-    //                 }
-    //             }
-    //         }
+            $('#detail').html(details);
 
-    //         //create a table element from the db (dynamically)
-    //         let table = document.createElement('table');
-
-    //         let tr = table.insertRow(-1);
-
-    //         for (let i = 0; i < col.length; i++) {
-    //             let th = document.createElement('th');
-    //             th.innerHTML = col[1];
-    //             tr.appendChild(th);
-    //         }
-
-    //         for (let i = 0; i < arrItems.length; i++) {
-    //             tr = table.insertRow(-1);
-
-    //             for (let j = 0; j < col.length; j++) {
-    //                 let tabCell = tr.insertCell(-1);
-    //                 if (j === 2) {
-
-    //                     let img = document.createElement('img');
-    //                     img.src = arrItems[i].Image;
-    //                     tabCell.appendChild(img);
-    //                 }
-    //                 else {
-    //                     tabCell.innerHTML = arrItems[i][col[j]];
-    //                 }   
-    //             }
-    //         }
-
-    //         let divContainer = document.getElementById('showData');
-    //         divContainer.innerHTML = "";
-    //         divContainer.appendChild(table);
-    //     });
-    // });
-    $('#bt').click(function () {
             
-        var url = "http://localhost:3000/cars";
+        })
+    })
 
-        $.getJSON(url, function (data) {
-            $.each(data, function (index, value) {
-                // APPEND OR INSERT DATA TO SELECT ELEMENT.
-                $('#sel').append('<option value="' + value.ID + '">' + value.Name + '</option>');
-            });
-        });
+    let search = new URLSearchParams(window.location.search);
+    let dataId = search.get('id');
+
+    $('.updateBtn').click(function(event){
+        event.preventDefault();
+        const carname = $('.carname').val();
+        const carmake = $('.carmake').val();
+        const carmodel = $('.carmodel').val();
+        const caryear = $('.caryear').val();
+        const caramt = $('.caramt').val();
+
+        $.ajax({
+            method: 'PATCH',
+            url: `http://localhost:3000/cars/${dataId}`,
+            data: {
+                carname,
+                carmake,
+                carmodel,
+                caryear,
+                caramt,
+            },
+        })
     });
 
-    // SHOW SELECTED VALUE.
-    $('#sel').change(function () {
-        $('#msg').text('Selected Item: ' + this.options[this.selectedIndex].text);
-    });
+    $('.deleteBtn').click(function(event){
+        event.preventDefault();
+        $.ajax({
+            method: 'DELETE',
+            url: `http://localhost:3000/cars/${dataId}`
+        })
+    })
 });

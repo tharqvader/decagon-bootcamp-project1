@@ -1,20 +1,20 @@
 {
   "cars": [
     {
-      "carname": "Tokunbo",
-      "carmake": "Toyota",
-      "carmodel": "Camry",
-      "caryear": "2019",
-      "caramt": "N11,500,000",
-      "id": 1
-    },
-    {
       "carname": "New",
       "carmake": "Lexus",
       "carmodel": "Rx350",
       "caryear": "2010",
       "caramt": "N5,000,000",
       "id": 2
+    },
+    {
+      "carname": "Nigerian Used",
+      "carmake": "Honda",
+      "carmodel": "Acura",
+      "caryear": "2005",
+      "caramt": "N1,500,000",
+      "id": 3
     }
   ]
 }
