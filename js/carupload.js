@@ -19,7 +19,8 @@ $(document).ready(function() {
                 caryear,
             },
             success: function(response) {
-                if (response.length) {
+                                if (response.length) {
+                      $('.errorMsg1').html(carname);
                 $('.errorMsg').html('Duplicate Input!');
                 } else {
                     $.ajax({
