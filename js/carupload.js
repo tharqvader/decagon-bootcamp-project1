@@ -1,13 +1,14 @@
 $(document).ready(function() {
     $('.uploadBtn').click(function(event) {
         event.preventDefault();
+        const imgurl = $('.imgurl').val();
         const carname = $('.carname').val();
         const carmake = $('.carmake').val();
         const carmodel = $('.carmodel').val();
         const caryear = $('.caryear').val();
         const caramt = $('.caramt').val();
 
-        if (!carname || !carmake || !carmodel || !caryear || !caramt) {
+        if (!imgurl || !carname || !carmake || !carmodel || !caryear || !caramt) {
             $('.errorMsg').html('Fields must not be empty!');
             return;
         }
@@ -27,6 +28,7 @@ $(document).ready(function() {
                         method: 'POST',
                         url: 'http://localhost:3000/cars',
                         data: {
+                            imgurl,
                             carname,
                             carmake,
                             carmodel,
@@ -46,7 +48,7 @@ $(document).ready(function() {
         let details = "";
         
         $.each(data.cars, function(key, value){
-            details += "<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
+            details += "<p>"+'<img src="/'+value.imgurl+'"/>'+"<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
 
 
             $('#detail').html(details);

@@ -15,6 +15,14 @@
       "caryear": "2005",
       "caramt": "N1,500,000",
       "id": 3
+    },
+    {
+      "carname": "Tokunbo",
+      "carmake": "Toyota",
+      "carmodel": "High Lander",
+      "caryear": "2019",
+      "caramt": "N4,500,500",
+      "id": 4
     }
   ]
 }
