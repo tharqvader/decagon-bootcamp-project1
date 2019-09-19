@@ -79,7 +79,7 @@ $(document).ready(function() {
               $('.logChk').html('You are logged in');
               localStorage.setItem('email', emailLog);
               //redirect to home page if the login is successfull
-              window.Location.assign('index.html');
+              //window.Location.assign('index.html');
             } else {
               $('.regMsg').html('Username or password Incorrect');
             }
