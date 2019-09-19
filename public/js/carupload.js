@@ -21,6 +21,7 @@ $(document).ready(function() {
             },
             success: function(response) {
                                 if (response.length) {
+                      $('.errorMsg1').html(carname);
                 $('.errorMsg').html('Duplicate Input!');
                 } else {
                     $.ajax({
@@ -42,22 +43,46 @@ $(document).ready(function() {
             },
         });
     });
-   
-    $.getJSON("db.json", function(data){
-        
-        $.each(data.cars, function(key, value){
-            let details = "";
-            let frontEnd = "";
-            details += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
-            frontEnd += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
+   $.ajax({
+       method: "GET",
+       url: "http://localhost:3000/cars",
+       success: function(data) {
+           console.log(data);
+           
+        $.each(data, function(key, value){
+            details = '';
+            frontEnd = '';
+            frontEnd += `<div class="card">
+        <div class="card-body">
+        <img class="card-img-top img-fluid" src="${value.imgurl}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">${value.carname}</h5>
+            <h5 class="card-subtitle"  style="font-size: 12px">${value.carmake}</h5>
+            <h5 class="card-subtitle"  style="font-size: 12px">${value.carmodel}</h5>
+            <h5 class="card-subtitle"  style="font-size: 12px">${value.caramt}</h5>
+            <h5 class="card-subtitle"  style="font-size: 12px">${value.caryear}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary btn-sm">Read more</a>
+        </div>
+        </div>
+    </div>`
+            details += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+ +"</p>"+"<p>"+ +"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
+            // frontEnd += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
 
 
-            $('#detail').html(details);
-            $('#frontEnd').html(frontEnd);
+            $('#detail').append(details);
+            $('#frontEnd').append(frontEnd);
 
             
         })
-    })
+       }
+   })
+    // $.getJSON("http://localhost:3000", function(data){
+    //     let details = "";
+    //     let frontEnd = "";
+        
+        
+    // })
 
     let search = new URLSearchParams(window.location.search);
     let dataId = search.get('id');

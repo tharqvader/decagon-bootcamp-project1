@@ -9,6 +9,7 @@ $(document).ready(function() {
     } else {
       //Else prompt the user he is logged in
       $('.logChk').html('You are logged in');
-    }
+      // window.location.assign('signin.html');
+    } 
   });
   

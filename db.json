@@ -5,86 +5,46 @@
       "lastname": "Udokwu",
       "username": "ravissant6",
       "email": "udokwu.chika@gmail.com",
-      "password": "abdch",
+      "password": "rave",
       "id": 1
-    },
-    {
-      "firstname": "Chika",
-      "lastname": "Obagi",
-      "username": "Obago1",
-      "email": "Obagi2@mail.com",
-      "password": "wechat",
-      "id": 2
     },
     {
       "firstname": "Abel ",
       "lastname": "Jonah",
       "username": "joebobs",
       "email": "jobobo@mail.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "firstname": "Gee",
-      "lastname": "Bag",
-      "username": "Gbee",
-      "email": "Gbag@yahoo.com",
-      "password": "abcdef",
-      "id": 4
-    },
-    {
-      "firstname": "Geezer",
-      "lastname": "Bagger",
-      "username": "Gbaa",
-      "email": "Gbeeg@yahoo.com",
-      "password": "qwerty",
-      "id": 5
-    },
-    {
-      "firstname": "abaa",
-      "lastname": "sunn",
-      "username": "abasun",
-      "email": "absun@gmail.com",
-      "password": "weget",
-      "id": 6
-    },
-    {
-      "firstname": "Abel ",
-      "lastname": "Udokwu",
-      "username": "Gbaa",
-      "email": "xteeana@yahoo.com",
-      "password": "wezat",
-      "id": 7
-    },
-    {
-      "fullname": "udo",
-      "username": "peace",
-      "email": "peaceee@mail.com",
-      "password": "cecee",
-      "id": 8
-    },
-    {
-      "fullname": "zita",
-      "username": "zitushi",
-      "email": "zitushi@mail.com",
-      "password": "zita",
-      "id": 9
-    },
-    {
-      "firstname": "fafaf",
-      "lastname": "dffggg",
-      "username": "cccc",
-      "email": "sgg2@mail.com",
-      "password": "abcdef",
-      "id": 10
-    },
-    {
-      "firstname": "Chika",
-      "lastname": "Bag",
-      "username": "abasun",
-      "email": "franca21@gmail.com",
-      "password": "abcdef",
-      "id": 11
+      "password": "jobee",
+      "id": 2
     }
-  ]
+  ],
+  "cars": [
+    {
+      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568838960/Decagon/2_mhrced.jpg",
+      "carname": "Foreign Used",
+      "carmake": "Toyota",
+      "carmodel": "Camry",
+      "caryear": "2019",
+      "caramt": "N11,500,000",
+      "id": 1
+    },
+    {
+      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568838961/Decagon/3_s3dbc6.jpg",
+      "carname": "Nigerian Used",
+      "carmake": "Lexus",
+      "carmodel": "Rx350",
+      "caryear": "2010",
+      "caramt": "N5,000,000",
+      "id": 2
+    },
+    {
+      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568838960/Decagon/1_riut3b.jpg",
+      "carname": "New",
+      "carmake": "Honda",
+      "carmodel": "Acura",
+      "caryear": "2017",
+      "caramt": "N10,500,000",
+      "id": 3
+    }
+  ],
+  "admin": []
 }
