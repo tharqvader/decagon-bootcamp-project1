@@ -44,6 +44,15 @@
       "caryear": "2017",
       "caramt": "N10,500,000",
       "id": 3
+    },
+    {
+      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568910937/Decagon/overview-282x190_6_upskpq.jpg",
+      "carname": "Foreign Used",
+      "carmake": "Mercedes-Benz",
+      "carmodel": "C300",
+      "caryear": "2009",
+      "caramt": "N3,573,385",
+      "id": 4
     }
   ],
   "admin": []

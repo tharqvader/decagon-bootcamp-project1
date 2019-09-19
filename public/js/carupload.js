@@ -57,16 +57,15 @@ $(document).ready(function() {
         <img class="card-img-top img-fluid" src="${value.imgurl}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">${value.carname}</h5>
-            <h5 class="card-subtitle"  style="font-size: 12px">${value.carmake}</h5>
-            <h5 class="card-subtitle"  style="font-size: 12px">${value.carmodel}</h5>
-            <h5 class="card-subtitle"  style="font-size: 12px">${value.caramt}</h5>
-            <h5 class="card-subtitle"  style="font-size: 12px">${value.caryear}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read more</a>
+            <h5 class="card-subtitle mb-2">${value.carmake}</h5>
+            <h5 class="card-subtitle mb-2">${value.carmodel}</h5>
+            <h5 class="card-subtitle mb-2"  style="font-size: 12px">${value.caramt}</h5>
+            <h5 class="card-subtitle mb-2"  style="font-size: 12px">${value.caryear}</h5>
+            <a href="payment.html" class="btn btn-primary btn-sm">Buy</a>
         </div>
         </div>
     </div>`
-            details += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+ +"</p>"+"<p>"+ +"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
+            details += "<p>"+'<img src="'+value.imgurl+'"/>'+"</p>"+"<p>"+value.carname +"</p>"+"<p>"+value.carmake +"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
             // frontEnd += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
 
 
@@ -77,36 +76,34 @@ $(document).ready(function() {
         })
        }
    })
-    // $.getJSON("http://localhost:3000", function(data){
-    //     let details = "";
-    //     let frontEnd = "";
-        
-        
-    // })
 
     let search = new URLSearchParams(window.location.search);
     let dataId = search.get('id');
 
     $('.updateBtn').click(function(event){
         event.preventDefault();
+        const imgurl = $('.imgurl').val();
         const carname = $('.carname').val();
         const carmake = $('.carmake').val();
         const carmodel = $('.carmodel').val();
         const caryear = $('.caryear').val();
         const caramt = $('.caramt').val();
-
-        $.ajax({
-            method: 'PATCH',
-            url: `http://localhost:3000/cars/${dataId}`,
-            data: {
-                carname,
-                carmake,
-                carmodel,
-                caryear,
-                caramt,
-            },
-        })
-    });
+    $.ajax({
+        method: 'PATCH',
+        url: `http://localhost:3000/cars/${dataId}`,
+        data: {
+            imgurl,
+            carname,
+            carmake,
+            carmodel,
+            caryear,
+            caramt,
+        },
+        success: function() {
+            $('.errorMsg').html('Upload Successful!');
+        },
+    })
+});
 
     $('.deleteBtn').click(function(event){
         event.preventDefault();

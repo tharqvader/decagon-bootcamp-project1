@@ -4,44 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Booty cars</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <title>CarZZZ</title>
 </head>
 <body>
-    <h1>CarZZZ</h1>
-    <header>
-        <nav>
-            <div class="moveRight">
-                <ul>
-                    <a href="#"><li>New Cars</li></a>
-                    <a href="#"><li>Old Cars</li></a>
-                    <a href="#"><li>Service Repair</li></a>    
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <a href="#"><li>Booty Guides</li></a>
-                    <a href="#"><li>Contact Us</li></a>
-                    <a href="#"><li>Search</li></a>
-                    <a href="#"><li>Sign In</li></a>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!--<div class="container">-->
+    <!--<h1>Booty Cars</h1>-->
+    <nav class="">
 
-<div>
+    </nav>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">CarZZZ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="enter.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Find your Car
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="newcars.html">New Cars<span class="sr-only">(current)</span></a>
+                <a class="dropdown-item" href="oldcars.html">Old Cars</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Service Repairs</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+
+<div class="container mt-5">
+
+    <h3 style="text-align: center">Add A Car</h3>
     <form>
-        <input type="url" class="imgurl" id="imgurl" placeholder="Car Image"/>
-        <label for="carname">Car Name: </label><input type="text" class="carname" id="carname" placeholder="Car Name" />
-        <label for="carmake">Car Make: </label><input type="text" class="carmake" id="carmake" placeholder="Car Make" />
-        <label for="carmodel">Car Model: </label><input type="text" class="carmodel" id="carmodel" placeholder="Car Model" />
-        <label for="caryear">Model Year: </label><input type="text" class="caryear" id="caryear" placeholder="Model Year" />
-        <label for="caramt">Amount: </label><input type="text" class="caramt" id="caramt" placeholder="Amount" />
+    
+    <form class="">
+        <div class="form-group">
+            <label for="imgurl">Car Image</label>
+            <input type="url" class="form-control" class="imgurl" id="imgurl"  placeholder="Car Image">
+        </div>
+        <div class="form-group">
+                <label for="carname">Car Name</label>
+                <input type="text" class="form-control" class="carname" id="carname"  placeholder="Car Name">
+        </div>
+        <div class="form-group">
+                <label for="carmake">Car Make</label>
+                <input type="text" class="form-control" class="carmake" id="carmake"  placeholder="Car Make">
+        </div>
+        <div class="form-group">
+                <label for="carmodel">Car Model</label>
+                <input type="text" class="form-control" class="carmodel" id="carmodel"  placeholder="Car Model">
+        </div>
+        <div class="form-group">
+                <label for="caryear">Model Year</label>
+                <input type="text" class="form-control" class="caryear" id="caryear"  placeholder="Model Year">
+        </div>
+        <div class="form-group">
+                <label for="caramt">Amount</label>
+                <input type="text" class="form-control" class="caramt" id="caramt"  placeholder="Amount">
+        </div>
         <button class="uploadBtn">Submit</button>
         <button class="updateBtn">Update</button>
         <button class="deleteBtn">Delete</button>
-        <p class="errorMsg"></p>
-
+        <!-- <button class="submitLogBtn">Log Out</button> -->
     </form>
+        
 </div>
 
 <div>
