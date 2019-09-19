@@ -13,5 +13,11 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
+.main_footer {
+    background-color: #e3f2fd;
+    padding: 40px 0 0 0;
+    position: relative;
+}
+
 

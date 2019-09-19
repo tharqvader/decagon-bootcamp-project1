@@ -11,7 +11,6 @@ $(document).ready(function() {
         $('.regMsg').html('Fill in all details');
         return;
         }
-
         $.ajax({
             method: 'GET',
             url: `http://localhost:3000/admin?username=${username}&email=${email}`,
