@@ -47,6 +47,44 @@
       "email": "absun@gmail.com",
       "password": "weget",
       "id": 6
+    },
+    {
+      "firstname": "Abel ",
+      "lastname": "Udokwu",
+      "username": "Gbaa",
+      "email": "xteeana@yahoo.com",
+      "password": "wezat",
+      "id": 7
+    },
+    {
+      "fullname": "udo",
+      "username": "peace",
+      "email": "peaceee@mail.com",
+      "password": "cecee",
+      "id": 8
+    },
+    {
+      "fullname": "zita",
+      "username": "zitushi",
+      "email": "zitushi@mail.com",
+      "password": "zita",
+      "id": 9
+    },
+    {
+      "firstname": "fafaf",
+      "lastname": "dffggg",
+      "username": "cccc",
+      "email": "sgg2@mail.com",
+      "password": "abcdef",
+      "id": 10
+    },
+    {
+      "firstname": "Chika",
+      "lastname": "Bag",
+      "username": "abasun",
+      "email": "franca21@gmail.com",
+      "password": "abcdef",
+      "id": 11
     }
   ]
 }

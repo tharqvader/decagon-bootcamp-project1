@@ -45,7 +45,7 @@ $(document).ready(function() {
                 $('.regMsg').html('Registration Successfull');
                 localStorage.setItem('email', email);
               //redirect to home page if the login is successfull
-                window.Location.assign('signin.html');
+                window.location.assign('enter.html');
                 },
             });
             }
@@ -75,11 +75,12 @@ $(document).ready(function() {
           },
           success: function(response) {
             if (response.length) {
-              //$('.regMsg').html('Login sucessful');
+              $('.regMsg').html('Login sucessful');
               $('.logChk').html('You are logged in');
-              localStorage.setItem('email', emailLog);
+              // $('#').modal('hide');
+              window.localStorage.setItem('email', emailLog);
               //redirect to home page if the login is successfull
-              //window.Location.assign('index.html');
+              window.location.assign('enter.html');
             } else {
               $('.regMsg').html('Username or password Incorrect');
             }
@@ -91,6 +92,35 @@ $(document).ready(function() {
         //clear the localstorage and redirect to signup page
         localStorage.clear();
         $('.logChk').html('Kindly login');
-        window.location.assign('signup.html');
+        window.location.assign('index.html');
       });
+
+      $('.uploadBtn').click(function(event) {
+        event.preventDefault();
+        const carname = $('.carname').val();
+        const carmake = $('.carmake').val();
+        const carmodel = $('.carmodel').val();
+        const caryear = $('.caryear').val();
+        const caramt = $('.caramt').val();
+
+        if (!carname || !carmake || !carmodel || !caryear || !caramt) {
+            $('.errorMsg').html('Fields must not be empty!');
+            return;
+        }
+        $.ajax({
+            method: 'GET',
+            url: `http://localhost:3000/cars?carmodel=${carmodel}&caryear=${caryear}`,
+            data: {
+                carmodel,
+                caryear,
+            },
+            success: function(response) {
+                                if (response.length) {
+                      $('.errorMsg1').html(carname);
+            } else{
+                $('.errorMsg').html('No such cars!!');
+            }
+        }
+    });
+});
 });
