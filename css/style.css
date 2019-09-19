@@ -1,0 +1,17 @@
+.navbar{
+    background-color: #e3f2fd;
+}
+
+.card-body {
+    padding: 0.5rem;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
