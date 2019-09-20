@@ -110,7 +110,6 @@ $(document).ready(function() {
         $.ajax({
             method: 'GET',
             url: `http://localhost:3000/cars?carmodel=${carmodel}&caryear=${caryear}`,
-            url: `http://localhost:3000/users?username=${username}&email=${email}`,
             data: {
                 carmodel,
                 caryear,

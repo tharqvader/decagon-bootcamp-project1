@@ -4,10 +4,10 @@ $(document).ready(function() {
     let user = window.localStorage.getItem('email');
     if (!user) {
       //If no user data, redirect to signup/login page, anyone you like
-      $('.logChk').html('Kindly Log in');
+      $('.chkLog').html('Kindly Log in');
       // window.location.assign('signin.html');
     }else {
       //Else prompt the user he is logged in
-      $('.logChk').html('You are logged in');
+      $('.chkLog').html('You are logged in');
     }
   });

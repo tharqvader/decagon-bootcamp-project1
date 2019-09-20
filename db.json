@@ -15,6 +15,14 @@
       "email": "jobobo@mail.com",
       "password": "jobee",
       "id": 2
+    },
+    {
+      "firstname": "Awele",
+      "lastname": "Omon",
+      "username": "Awee",
+      "email": "awele@mail.com",
+      "password": "aweleoo",
+      "id": 3
     }
   ],
   "cars": [

@@ -21,7 +21,6 @@ $(document).ready(function() {
             },
             success: function(response) {
                                 if (response.length) {
-                      $('.errorMsg1').html(carname);
                 $('.errorMsg').html('Duplicate Input!');
                 } else {
                     $.ajax({
