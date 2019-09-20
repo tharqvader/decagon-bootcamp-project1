@@ -23,18 +23,17 @@
       "email": "awele@mail.com",
       "password": "aweleoo",
       "id": 3
+    },
+    {
+      "firstname": "Ifeyinwa",
+      "lastname": "Ezeamaka",
+      "username": "ezelousie",
+      "email": "ezelouise@gmail.com",
+      "password": "ezeudo",
+      "id": 4
     }
   ],
   "cars": [
-    {
-      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568838960/Decagon/2_mhrced.jpg",
-      "carname": "Foreign Used",
-      "carmake": "Toyota",
-      "carmodel": "Camry",
-      "caryear": "2019",
-      "caramt": "N11,500,000",
-      "id": 1
-    },
     {
       "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568838961/Decagon/3_s3dbc6.jpg",
       "carname": "Nigerian Used",
@@ -61,6 +60,33 @@
       "caryear": "2009",
       "caramt": "N3,573,385",
       "id": 4
+    },
+    {
+      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568962907/Decagon/ToyotaAurisHybrid-800x400_bwea1n.jpg",
+      "carname": "New",
+      "carmake": "Toyota",
+      "carmodel": "Auris hybrid",
+      "caryear": "2018",
+      "caramt": "N4,503,302",
+      "id": 5
+    },
+    {
+      "imgurl": "https://res.cloudinary.org/tharqvader/image/upload/v1568962907/Decagon/ToyotaAurisHybrid-800x400_bwea1n.jpg",
+      "carname": "New",
+      "carmake": "Toyota",
+      "carmodel": "Auris",
+      "caryear": "2018",
+      "caramt": "N3,573,385",
+      "id": 6
+    },
+    {
+      "imgurl": "https://res.cloudinary.com/tharqvader/image/upload/v1568962905/Decagon/Lexus-RX_ylui3w.jpg",
+      "carname": "Nigerian Used",
+      "carmake": "Lexus",
+      "carmodel": "Rx350",
+      "caryear": "2010",
+      "caramt": "N5,000,000",
+      "id": 7
     }
   ],
   "admin": []

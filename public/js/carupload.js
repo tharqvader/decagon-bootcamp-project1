@@ -1,27 +1,26 @@
 $(document).ready(function() {
     $('.uploadBtn').click(function(event) {
         event.preventDefault();
-        const imgurl = $('.imgurl').val();
-        const carname = $('.carname').val();
-        const carmake = $('.carmake').val();
-        const carmodel = $('.carmodel').val();
-        const caryear = $('.caryear').val();
-        const caramt = $('.caramt').val();
+        const imgurl = $('#imgurl').val();
+        const carname = $('#carname').val();
+        const carmake = $('#carmake').val();
+        const carmodel = $('#carmodel').val();
+        const caryear = $('#caryear').val();
+        const caramt = $('#caramt').val();
 
         if (!imgurl || !carname || !carmake || !carmodel || !caryear || !caramt) {
-            $('.errorMsg').html('Fields must not be empty!');
+            $('.regMsg').html('Fields must not be empty!');
             return;
         }
         $.ajax({
             method: 'GET',
-            url: `http://localhost:3000/cars?carmodel=${carmodel}&caryear=${caryear}`,
+            url: `http://localhost:3000/cars?imgurl=${imgurl}`,
             data: {
-                carmodel,
-                caryear,
+                imgurl,
             },
             success: function(response) {
                                 if (response.length) {
-                $('.errorMsg').html('Duplicate Input!');
+                $('.regMsg').html('Duplicate Input!');
                 } else {
                     $.ajax({
                         method: 'POST',
@@ -35,7 +34,7 @@ $(document).ready(function() {
                             caramt,
                         },
                         success: function() {
-                            $('.errorMsg').html('Upload Successful!');
+                            $('.regMsg').html('Upload Successful!');
                         },
                     })
                 }
@@ -64,7 +63,7 @@ $(document).ready(function() {
         </div>
         </div>
     </div>`
-            details += "<p>"+'<img src="'+value.imgurl+'"/>'+"</p>"+"<p>"+value.carname +"</p>"+"<p>"+value.carmake +"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
+            details += "<p>"+'<img src="'+value.imgurl+'"/>'+"</p>"+"<p>"+value.carname +"</p>"+"<p>"+value.carmake +"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'cardisplay.html?id=' + value.id + '"> ValueID</a>'
             // frontEnd += "<p>"+'<img src="'+value.imgurl+'"/>'+"<p>"+value.carname +"</p>"+"<p>"+ value.carmake+"</p>" +"<p>"+ value.carmodel +"</p>"+"<p>"+ value.caryear+"</p>" +"<p>"+ value.caramt + '<a href ="' + 'carupload.html?id=' + value.id + '"> ValueID</a>'
 
 
@@ -81,12 +80,12 @@ $(document).ready(function() {
 
     $('.updateBtn').click(function(event){
         event.preventDefault();
-        const imgurl = $('.imgurl').val();
-        const carname = $('.carname').val();
-        const carmake = $('.carmake').val();
-        const carmodel = $('.carmodel').val();
-        const caryear = $('.caryear').val();
-        const caramt = $('.caramt').val();
+        const imgurl = $('#imgurl').val();
+        const carname = $('#carname').val();
+        const carmake = $('#carmake').val();
+        const carmodel = $('#carmodel').val();
+        const caryear = $('#caryear').val();
+        const caramt = $('#caramt').val();
     $.ajax({
         method: 'PATCH',
         url: `http://localhost:3000/cars/${dataId}`,
@@ -99,7 +98,7 @@ $(document).ready(function() {
             caramt,
         },
         success: function() {
-            $('.errorMsg').html('Upload Successful!');
+            $('.regMsg').html('Update Successful!');
         },
     })
 });
